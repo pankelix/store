@@ -13,8 +13,7 @@ import { CartService } from '../../services/cart.service';
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule, RouterLink, MatToolbarModule, MatIconModule, MatBadgeModule, MatButtonModule, MatMenuModule],
-  templateUrl: './header.component.html',
-  styles: ``
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent {
   constructor(private cartService: CartService) { }
