@@ -16,7 +16,7 @@ export class ProductsHeaderComponent {
   @Output() sortChange = new EventEmitter<string>()
 
   sort = 'desc'
-  itemsCount = 12
+  itemsCount = 6
 
   onSortUpdated(newSort: string): void {
     this.sort = newSort
