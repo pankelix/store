@@ -35,14 +35,14 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
 
-  columns = 3
-  rowHeight = ROWS_HEIGHT[this.columns]
-
   category: string | undefined
   products: Array<Product> | undefined
-  sort = 'desc'
-  count = 12
   productsSubscription: Subscription | undefined
+
+  sort = 'desc'
+  count = 6
+  columns = 3
+  rowHeight = ROWS_HEIGHT[this.columns]
 
   getProducts(): void {
     this.productsSubscription = this.storeService.getAllProducts(this.count, this.sort, this.category).subscribe((_products) => {
